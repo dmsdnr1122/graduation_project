@@ -13,7 +13,7 @@ namespace Kudan.AR.Samples
         public TrackingMethodMarker _markerTracking;	// The reference to the marker tracking method that lets the tracker know which method it is using
         public TrackingMethodMarkerless _markerlessTracking;	// The reference to the markerless tracking method that lets the tracker know which method it is using
 
-		public Text buttonText;
+		//public Text buttonText;
 
         public void MarkerClicked()
         {
@@ -45,6 +45,7 @@ namespace Kudan.AR.Samples
 
 		void Update()
 		{
+            /*
 			if (!_kudanTracker.ArbiTrackIsTracking ()) 
 			{
 				buttonText.text = "Start Markerless Tracking";
@@ -53,6 +54,7 @@ namespace Kudan.AR.Samples
 			{
 				buttonText.text = "Stop Markerless Tracking";
 			}
+            */
 		}
 	}
 }

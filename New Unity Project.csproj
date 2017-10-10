@@ -76,9 +76,6 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="Vuforia.UnityExtensions">
-      <HintPath>Assets\Vuforia\Scripts\Internal\Vuforia.UnityExtensions.dll</HintPath>
-    </Reference>
     <Reference Include="SimpleJson">
       <HintPath>Assets\_KudanAR\UnitySocketIO\SimpleJson.dll</HintPath>
     </Reference>
@@ -129,43 +126,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BtnClick.cs" />
+    <Compile Include="Assets\Scripts\DragHandler.cs" />
+    <Compile Include="Assets\Scripts\EndTakScene.cs" />
     <Compile Include="Assets\Scripts\GUIManager.cs" />
+    <Compile Include="Assets\Scripts\HintScene.cs" />
+    <Compile Include="Assets\Scripts\InventoryScript.cs" />
+    <Compile Include="Assets\Scripts\SlotHandler.cs" />
+    <Compile Include="Assets\Scripts\Sound_Script.cs" />
     <Compile Include="Assets\Scripts\TextboxManager.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\BackgroundPlaneBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\CloudRecoBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\CylinderTargetBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\DefaultSmartTerrainEventHandler.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\GLErrorHandler.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\HideExcessAreaBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\ImageTargetBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\Internal\AndroidUnityPlayer.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\Internal\ComponentFactoryStarterBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\Internal\IOSUnityPlayer.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\Internal\VuforiaBehaviourComponentFactory.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\Internal\WSAUnityPlayer.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\MaskOutBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\MultiTargetBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\ObjectTargetBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\PropBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\ReconstructionBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\ReconstructionFromTargetBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\SurfaceBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\TextRecoBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\TurnOffBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\TurnOffWordBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\UserDefinedTargetBuildingBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\Utilities\VRIntegrationHelper.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\VideoBackgroundBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\VirtualButtonBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\VuMarkBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\VuforiaBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\VuforiaConfiguration.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\VuforiaRuntimeInitialization.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\WireframeBehaviour.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\WireframeTrackableEventHandler.cs" />
-    <Compile Include="Assets\Vuforia\Scripts\WordBehaviour.cs" />
+    <Compile Include="Assets\Scripts\ToastMessage.cs" />
+    <Compile Include="Assets\Scripts\Touch_Event_K.cs" />
+    <Compile Include="Assets\Scripts\main_touch.cs" />
     <Compile Include="Assets\_KudanAR\Samples\Flying\FlyBehaviour_RigidbodyVelocity.cs" />
     <Compile Include="Assets\_KudanAR\Samples\Flying\FlyBehaviour_TargetTransform.cs" />
     <Compile Include="Assets\_KudanAR\Samples\Scripts\MarkerlessTouch.cs" />
@@ -191,35 +163,25 @@
     <Compile Include="Assets\_KudanAR\Scripts\Components\TransformDrivers\MarkerTransformDriver.cs" />
     <Compile Include="Assets\_KudanAR\Scripts\Components\TransformDrivers\MarkerlessTransformDriver.cs" />
     <Compile Include="Assets\_KudanAR\Scripts\Components\TransformDrivers\TransformDriverBase.cs" />
-    <Compile Include="Assets\_KudanAR\Scripts\Lancekun_Go_Main.cs" />
+    <Compile Include="Assets\_KudanAR\Scripts\Kudan_Main.cs" />
     <Compile Include="Assets\_KudanAR\Scripts\Obj_Set.cs" />
     <Compile Include="Assets\_WifiRssi\Scripts\MysqlDB.cs" />
     <Compile Include="Assets\_WifiRssi\Scripts\PluginTest.cs" />
-    <Compile Include="Assets\_WifiRssi\Scripts\Sphere.cs" />
+    <Compile Include="Assets\_WifiRssi\Scripts\accelation_speed.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Art\ALU.txt" />
     <None Include="Assets\Art\Buttons\Credits.txt" />
-    <None Include="Assets\Art\deal.txt" />
-    <None Include="Assets\Plugins\iOS\Vuforia.UnityExtensions.iOS.XML" />
-    <None Include="Assets\StreamingAssets\Vuforia\HelloAR.xml" />
-    <None Include="Assets\Vuforia\Editor\Scripts\Vuforia.UnityExtensions.Editor.XML" />
-    <None Include="Assets\Vuforia\Editor\WebcamProfiles\profiles.xml" />
-    <None Include="Assets\Vuforia\Scripts\Internal\Vuforia.UnityExtensions.XML" />
-    <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
-    <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />
-    <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
-    <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
-    <None Include="Assets\Vuforia\Shaders\RenderVideoBackground.shader" />
-    <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
-    <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
-    <None Include="Assets\Vuforia\Shaders\VideoBackground.shader" />
+    <None Include="Assets\Art\EndTak.txt" />
+    <None Include="Assets\Art\Final_Scne.txt" />
+    <None Include="Assets\Art\First_Scene.txt" />
+    <None Include="Assets\Art\IAnd_Scene.txt" />
+    <None Include="Assets\Art\R2D2_Scene.txt" />
+    <None Include="Assets\Art\Tak_Scene.txt" />
     <None Include="Assets\_KudanAR\Materials\Background.shader" />
     <None Include="Assets\_KudanAR\Materials\DebugFlat.shader" />
     <None Include="Assets\_KudanAR\Materials\ShadowCatcher.shader" />
     <None Include="Assets\_KudanAR\Resources\YpCbCr.shader" />
-    <None Include="Assets\license_3rdpartynotice.txt" />
-    <None Include="Assets\link.xml" />
-    <None Include="Assets\readme_SDK.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

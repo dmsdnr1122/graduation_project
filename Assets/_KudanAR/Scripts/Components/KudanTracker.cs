@@ -214,6 +214,7 @@ namespace Kudan.AR
 				kudanTracker = this;
 			}
 			// If KudanTracker already exists in the scene, but this is not it, destroy this gameobject, because there should only be one KudanTracker in a scene at any one time.
+            
 			else if (kudanTracker != this)
 			{
 				Debug.LogError ("There should only be one Kudan Tracker active at once.");

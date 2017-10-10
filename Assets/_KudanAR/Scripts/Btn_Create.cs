@@ -12,7 +12,7 @@ public class Btn_Create : MonoBehaviour {
     {
         if (GUI.Button(new Rect(0, 300, 300, 400), "A에게 Hint를 얻을려면 Click"))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("HintScene_A");
         }
     }
 }

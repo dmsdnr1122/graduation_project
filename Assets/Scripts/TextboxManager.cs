@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class TextboxManager : MonoBehaviour {
 	public GameObject textBox;
-
-	public Text theText;
+    public GameObject ToKudan;
+    public GameObject Manual;
+    public Text theText;
 
 	public TextAsset textFile;
 	public string[] textLines;
@@ -15,12 +17,15 @@ public class TextboxManager : MonoBehaviour {
 	public int currentLine;
 	public int endAtLine;
 	public int isendflag = 0;
-	//public PlayerController player;
+    //public PlayerController player;
+    public Sound_Script sound;
 
 	// Use this for initialization
 	void Start () {
-		//player = FindObjectOfType<PlayerController> ();
-
+        GameObject.Find("ToKudan").SetActive(false);
+        GameObject.Find("TextManual").SetActive(false);
+        //player = FindObjectOfType<PlayerController> ();
+        sound.LoopSound();
 		if (textFile != null)
 		{
 			textLines = (textFile.text.Split ('\n'));
@@ -30,19 +35,42 @@ public class TextboxManager : MonoBehaviour {
 		{
 			endAtLine = textLines.Length - 1;
 		}
-	}
+    }
 
 	void Update()
 	{
 		theText.text = textLines [currentLine];
 	}
 
-	public void ToRightPage() {
-		if (currentLine < endAtLine) currentLine += 1;
-		if (currentLine == endAtLine) gameObject.GetComponent<GUIManager>().enabled = true;
-	}
+    public void ToRightPage() {
+        if (currentLine < endAtLine)
+        {
+            sound.BtnSound();
+            currentLine += 1;
+        }
+		if (currentLine == endAtLine) ToKudan.SetActive(true);
+    }
 	public void ToLeftPage() {
-		if (currentLine > 0) currentLine -= 1;
-		if (currentLine != endAtLine) gameObject.GetComponent<GUIManager>().enabled = false;
-	}
+        if (currentLine > 0)
+        {
+            sound.BtnSound();
+            currentLine -= 1;
+        }
+		if (currentLine != endAtLine) ToKudan.SetActive(false);
+    }
+    public void GoKudan()
+    {
+        sound.BtnSound();
+        SceneManager.LoadScene("Kudan_Scene");
+    }
+    public void TextManual_Active()
+    {
+        sound.PaperSound();
+        Manual.SetActive(true);
+    }
+    public void TextManual_Unactive()
+    {
+        sound.PaperSound();
+        Manual.SetActive(false);
+    }
 }

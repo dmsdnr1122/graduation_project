@@ -44,6 +44,7 @@ namespace Kudan.AR
 			{
 				tracker.FloorPlaceGetPose (out pos, out rot);
 
+                
 				target.transform.position = pos;
 				target.transform.Translate (0, -25, 0);
 				target.transform.rotation = rot;

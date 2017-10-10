@@ -6,18 +6,20 @@ using System;
 
 public class MysqlDB
 {
-
-
     MySqlConnection sqlconn = null;
 
-    private string sqlDBip = "172.21.173.57";
+    private string sqlDBip = "172.21.184.197";
+
+    //private string sqlDBname = "test"; fingerprinting
+    
     private string sqlDBname = "test";
     private string sqlDBid = "root";
     private string sqlDBpw = "godew";
 
     private void sqlConnect()
     {
-        string sqlDatabase = "Server=" + sqlDBip + ";Database=" + sqlDBname + ";UserId=" + sqlDBid + ";Password=" + sqlDBpw + "";
+        string sqlDatabase = "Server=" + sqlDBip + ";Databa" +
+            "se=" + sqlDBname + ";UserId=" + sqlDBid + ";Password=" + sqlDBpw + "";
         try
         {
             sqlconn = new MySqlConnection(sqlDatabase);
